@@ -1,0 +1,146 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("game.png");
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Center the image */
+    color: #fb0505;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-image: url("image1.png");
+    background-size: contain; /* Ensures the image fits within the container */
+    background-repeat: repeat; /* Prevents the image from repeating */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(245, 2, 2);
+    max-width: 400px;
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: #007bff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #f0efb3;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    font-size: 36px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0px 10px rgb(248, 9, 9);
+}
+
+.cell:hover {
+    background-color: #00e5ff;
+    transform: scale(1.05);
+}
+
+.cell:active {
+    background-color: #eefd12;
+    transform: scale(0.98);
+}
+
+.reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(102, 255, 0, 0.1);
+}
+
+.reset:hover {
+    background-color: #ff1e00;
+    transform: scale(1.05);
+}
+
+.reset:active {
+    background-color: #0dfd05;
+    transform: scale(0.95);
+}
+
+#status {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+.mode-selection button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #00ff3c;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0px 10px rgb(255, 0, 0);
+}
+
+.mode-selection button:hover {
+    background-color: #ffee00;
+    transform: scale(1.05);
+}
+
+.mode-selection button:active {
+    background-color: #ff0000;
+    transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+        color: #0dfd05;
+    }
+
+    .board {
+        grid-gap: 10px;
+    }
+
+    .reset, .mode-selection button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+}
